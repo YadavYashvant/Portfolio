@@ -1,0 +1,26 @@
+[versions]
+androidx-lifecycle = "2.9.1"
+composeMultiplatform = "1.8.2"
+junit = "4.13.2"
+kotlin = "2.2.0"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "composeMultiplatform" }
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "composeMultiplatform" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "composeMultiplatform" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+androidx-compose-layout = { module = "androidx.compose.layout:layout", version.ref = "composeMultiplatform" }
+androidx-compose-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "composeMultiplatform" }
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeMultiplatform" }
+androidx-compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "composeMultiplatform" }
+
+[plugins]
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
