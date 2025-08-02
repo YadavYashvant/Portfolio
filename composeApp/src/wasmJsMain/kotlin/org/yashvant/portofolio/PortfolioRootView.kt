@@ -74,7 +74,7 @@ private fun MobileLayout(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(DarculaColors.SurfaceVariant)
+                .background(DarculaColors.Background)
                 .padding(12.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -191,8 +191,8 @@ private fun StatusBar() {
         modifier = Modifier
             .fillMaxWidth()
             .height(24.dp)
-            .background(DarculaColors.StatusBar)
-            .border(1.dp, DarculaColors.TabBorder)
+            .background(DarculaColors.Background)
+            .border(1.dp, DarculaColors.StatusBar)
             .padding(horizontal = 12.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
