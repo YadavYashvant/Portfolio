@@ -1,108 +1,20 @@
-# Yashvant Yadav - Android Developer Portfolio
+This is a Kotlin Multiplatform project targeting Web.
 
-A personal portfolio website built with Kotlin and Compose for Web, designed to replicate the Android Studio IDE experience with the Darcula theme.
+* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
+  It contains several subfolders:
+  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
+  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
+    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
+    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
+    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
+    folder is the appropriate location.
 
-## Features
 
-- **Android Studio-like Interface**: Complete replica of the Android Studio IDE with Darcula theme
-- **File Explorer**: Interactive file tree with expandable folders
-- **Code Editor**: Syntax highlighting for Kotlin and Markdown files
-- **Project Demos**: Interactive project demonstrations with modal dialogs
-- **Responsive Design**: Optimized for desktop viewing
-- **Kotlin-First**: Built entirely with Kotlin and Compose for Web
+Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
+[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
+[Kotlin/Wasm](https://kotl.in/wasm/)…
 
-## Technology Stack
+We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
+If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
 
-- **Language**: Kotlin
-- **UI Framework**: Compose for Web
-- **Architecture**: MVVM (Model-View-ViewModel)
-- **Compilation Target**: Kotlin/Wasm
-- **Theme**: Android Studio Darcula
-
-## Project Structure
-
-```
-src/wasmJsMain/kotlin/
-├── data/
-│   └── Models.kt              # Data classes for portfolio content
-├── view/
-│   ├── FileExplorerView.kt    # File tree component
-│   ├── EditorView.kt          # Code editor with tabs
-│   ├── StatusBarView.kt       # Status bar component
-│   ├── ProjectDemoDialog.kt   # Project demo modal
-│   └── PortfolioRootView.kt   # Main layout orchestrator
-├── viewmodel/
-│   └── PortfolioViewModel.kt  # MVVM ViewModel
-└── Main.kt                    # Application entry point
-```
-
-## Build Instructions
-
-### Prerequisites
-
-- Java 11 or higher
-- Gradle 8.4 or higher
-
-### Building the Project
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd portfolio
-```
-
-2. Build the project:
-```bash
-./gradlew build
-```
-
-3. Run the development server:
-```bash
-./gradlew wasmJsBrowserDevelopmentRun
-```
-
-4. Open your browser and navigate to `http://localhost:8080`
-
-### Building for Production
-
-To build the production version:
-
-```bash
-./gradlew wasmJsBrowserProductionRun
-```
-
-The built files will be in `build/distributions/` and can be deployed to any static web host.
-
-## Portfolio Content
-
-The portfolio includes:
-
-- **Personal Information**: Contact details and professional links
-- **Experience**: Internship details at AGOMUC and DAPS
-- **Projects**: 
-  - Zyptra (Android app backup solution)
-  - ImGC (Image analysis with Gemini Vision API)
-  - Codev (Collaborative code development platform)
-  - Diaensho (Digital fashion platform)
-- **Skills**: Programming languages, frameworks, and tools
-- **Achievements**: Competition wins and problem-solving records
-
-## Interactive Features
-
-- **File Navigation**: Click on files in the explorer to open them
-- **Tab Management**: Open multiple files with closeable tabs
-- **Project Demos**: Click "Run Project" buttons to see interactive demos
-- **Syntax Highlighting**: Kotlin and Markdown files with proper highlighting
-
-## Deployment
-
-The built application consists of static files that can be deployed to:
-
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static web hosting service
-
-## License
-
-MIT License - see LICENSE file for details.
+You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
