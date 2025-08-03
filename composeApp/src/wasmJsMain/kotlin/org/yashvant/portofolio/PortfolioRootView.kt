@@ -191,8 +191,8 @@ private fun StatusBar() {
         modifier = Modifier
             .fillMaxWidth()
             .height(24.dp)
-            .background(DarculaColors.Background)
-            .border(1.dp, DarculaColors.StatusBar)
+            .background(DarculaColors.StatusBar)
+            .border(1.dp, DarculaColors.TabBorder)
             .padding(horizontal = 12.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
